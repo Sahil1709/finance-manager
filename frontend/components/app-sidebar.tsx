@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
-import { BarChart3, CreditCard, Home, PieChart, Settings } from "lucide-react"
+import { BarChart3, CreditCard, Home, PieChart, Settings } from "lucide-react";
+import { UserButton, useUser } from "@clerk/nextjs";
 import {
   Sidebar,
   SidebarContent,
@@ -12,9 +13,9 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
-} from "@/components/ui/sidebar"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+} from "@/components/ui/sidebar";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navigation = [
   {
@@ -28,12 +29,15 @@ const navigation = [
   },
   {
     title: "Settings",
-    links: [{ title: "Preferences", icon: Settings, href: "/settings" }],
+    links: [
+      { title: "Preferences", icon: Settings, href: "/settings" },
+    ],
   },
-]
+];
 
 export function AppSidebar() {
-  const pathname = usePathname()
+  const pathname = usePathname();
+  const { user } = useUser();
 
   return (
     <Sidebar>
@@ -48,7 +52,10 @@ export function AppSidebar() {
               <SidebarMenu>
                 {group.links.map((link) => (
                   <SidebarMenuItem key={link.href}>
-                    <SidebarMenuButton asChild isActive={pathname === link.href}>
+                    <SidebarMenuButton
+                      asChild
+                      isActive={pathname === link.href}
+                    >
                       <Link href={link.href}>
                         <link.icon className="mr-2 h-4 w-4" />
                         {link.title}
@@ -61,8 +68,13 @@ export function AppSidebar() {
           </SidebarGroup>
         ))}
       </SidebarContent>
+      <div className="flex items-center p-4 border-t">
+        <UserButton />
+        <div className="ml-2">
+          <p className="text-sm font-medium">{user?.fullName}</p>
+        </div>
+      </div>
       <SidebarRail />
     </Sidebar>
-  )
+  );
 }
-
