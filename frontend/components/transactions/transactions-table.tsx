@@ -54,22 +54,22 @@ export function TransactionsTable({
   const columns: ColumnDef<Transaction>[] = [
     {
       accessorKey: "date",
-      header: "Date",
-      cell: ({ row }) => <div>{row.getValue("date")}</div>,
-    },
-    {
-      accessorKey: "description",
       header: ({ column }) => {
         return (
           <Button
             variant="ghost"
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           >
-            Description
+            Date
             <ArrowUpDown className="ml-2 h-4 w-4" />
           </Button>
         );
       },
+      cell: ({ row }) => <div>{row.getValue("date")}</div>,
+    },
+    {
+      accessorKey: "description",
+      header: "Description",
     },
     {
       accessorKey: "category",
@@ -77,7 +77,17 @@ export function TransactionsTable({
     },
     {
       accessorKey: "amount",
-      header: "Amount",
+      header: ({ column }) => {
+        return (
+          <Button
+            variant="ghost"
+            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          >
+            Amount
+            <ArrowUpDown className="ml-2 h-4 w-4" />
+          </Button>
+        );
+      },
       cell: ({ row }) => {
         const amount = row.getValue("amount") as number;
         const formatted = new Intl.NumberFormat("en-US", {
@@ -135,6 +145,11 @@ export function TransactionsTable({
     state: {
       sorting,
       columnFilters,
+    },
+    initialState: {
+      pagination: {
+        pageSize: 10,
+      },
     },
   });
 
@@ -199,6 +214,26 @@ export function TransactionsTable({
           </TableBody>
         </Table>
       </div>
+      {table.getPageCount() > 1 && (
+        <div className="flex items-center justify-between py-4">
+          <Button
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+          >
+            Previous
+          </Button>
+          <span>
+            Page {table.getState().pagination.pageIndex + 1} of{" "}
+            {table.getPageCount()}
+          </span>
+          <Button
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+          >
+            Next
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

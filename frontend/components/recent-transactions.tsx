@@ -1,30 +1,33 @@
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+"use client";
 
-const transactions = [
-  {
-    id: "1",
-    date: "2024-02-19",
-    description: "Grocery Shopping",
-    amount: -120.5,
-    category: "Food",
-  },
-  {
-    id: "2",
-    date: "2024-02-18",
-    description: "Salary Deposit",
-    amount: 3500.0,
-    category: "Income",
-  },
-  {
-    id: "3",
-    date: "2024-02-17",
-    description: "Netflix Subscription",
-    amount: -15.99,
-    category: "Entertainment",
-  },
-]
+import { useState, useEffect } from "react";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+
+type Transaction = {
+  id: string;
+  date: string;
+  description: string;
+  category: string;
+  amount: number;
+};
 
 export function RecentTransactions() {
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
+
+  useEffect(() => {
+    async function fetchTransactions() {
+      try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions?limit=5`);
+        const data = await response.json();
+        setTransactions(data);
+      } catch (error) {
+        console.error("Failed to fetch transactions:", error);
+      }
+    }
+
+    fetchTransactions();
+  }, []);
+
   return (
     <Table>
       <TableHeader>
@@ -39,13 +42,12 @@ export function RecentTransactions() {
           <TableRow key={transaction.id}>
             <TableCell>{transaction.date}</TableCell>
             <TableCell>{transaction.description}</TableCell>
-            <TableCell className={`text-right ${transaction.amount > 0 ? "text-green-600" : "text-red-600"}`}>
+            <TableCell className={`text-right ${transaction.category == "income" ? "text-green-600" : "text-red-600"}`}>
               ${Math.abs(transaction.amount).toFixed(2)}
             </TableCell>
           </TableRow>
         ))}
       </TableBody>
     </Table>
-  )
+  );
 }
-
