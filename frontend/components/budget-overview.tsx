@@ -68,7 +68,6 @@ export function BudgetOverview() {
     return { ...budget, spent };
   });
 
-  console.log(budgetsWithSpent);
 
   return (
     <div className="space-y-4">

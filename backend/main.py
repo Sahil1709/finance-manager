@@ -6,6 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from sqlalchemy import create_engine, Column, Integer, String, Float, Date, DateTime, Enum as SQLEnum
 from sqlalchemy.orm import sessionmaker, declarative_base, Session
+from sqlalchemy.sql import func
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -213,3 +214,14 @@ def delete_budget(budget_id: int, db: Session = Depends(get_db)):
     db.delete(db_budget)
     db.commit()
     return {"detail": "Budget deleted"}
+
+@app.get("/summary/{userid}", response_model=dict)
+def get_summary(userid: str, db: Session = Depends(get_db)):
+    total_income = db.query(Transaction).filter(Transaction.userid == userid, Transaction.category == "income").with_entities(func.sum(Transaction.amount)).scalar() or 0
+    total_expenses = db.query(Transaction).filter(Transaction.userid == userid, Transaction.category != "income").with_entities(func.sum(Transaction.amount)).scalar() or 0
+    total_balance = total_income - total_expenses
+    return {
+        "total_income": total_income,
+        "total_expenses": total_expenses,
+        "total_balance": total_balance
+    }
