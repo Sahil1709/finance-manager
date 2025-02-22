@@ -37,6 +37,11 @@ const colorThemes = [
     value: "orange",
     color: "hsl(24.6 95% 53.1%)",
   },
+  {
+    name: "Slate",
+    value: "slate",
+    color: "hsl(210 16.7% 63.1%)",
+  }
 ]
 
 const radiusOptions = [
