@@ -5,6 +5,7 @@ import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TransactionsTable } from "@/components/transactions/transactions-table";
 import { AddTransactionDialog } from "@/components/transactions/add-transaction-dialog";
+import { useAuth } from "@clerk/nextjs";
 
 type Transaction = {
   id: string;
@@ -21,11 +22,13 @@ export default function TransactionsPage() {
   const [editingTransaction, setEditingTransaction] =
     useState<Partial<Transaction> | null>(null);
 
+  const { userId } = useAuth();
+
   useEffect(() => {
     async function fetchTransactions() {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions`
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions?userid=${userId}`
         );
         const transactions = await response.json();
         setData((prevData) => {
@@ -40,7 +43,7 @@ export default function TransactionsPage() {
     }
 
     fetchTransactions();
-  }, []); // Ensure this only runs on mount
+  }, [userId]);
 
   const handleDelete = async (id: string) => {
     await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions/${id}`, {
@@ -84,7 +87,7 @@ export default function TransactionsPage() {
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(updatedTransaction),
+            body: JSON.stringify({ ...updatedTransaction, userid: userId }), 
           }
         );
         const newTransaction = await response.json();
