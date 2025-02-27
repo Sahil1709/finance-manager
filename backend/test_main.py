@@ -1,11 +1,11 @@
+import os
+DATABASE_URL = "sqlite:///./test.db"
+os.environ["DATABASE_URL"] = DATABASE_URL
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from main import app, Base, get_db, Transaction, Budget
-import os
-DATABASE_URL = "sqlite:///./test.db"
-os.environ["DATABASE_URL"] = DATABASE_URL
 
 
 engine = create_engine(DATABASE_URL)
