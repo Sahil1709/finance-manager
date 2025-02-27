@@ -36,10 +36,10 @@ class Transaction(Base):
 class Budget(Base):
     __tablename__ = "budgets"
     id = Column(Integer, primary_key=True, index=True)
-    userid = Column(String, index=True)
-    category = Column(String, index=True, unique=True)
+    userid = Column(String(50), index=True)
+    category = Column(String(100), index=True, unique=True)
     amount = Column(Float)
-    period = Column(String)
+    period = Column(String(100))
     created_at = Column(DateTime, default=datetime.utcnow)
 
 # Create all tables if they don't exist
