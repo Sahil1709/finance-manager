@@ -10,6 +10,7 @@ import {
 } from "@clerk/nextjs";
 import "./globals.css";
 import { AppSidebar } from "@/components/app-sidebar";
+import { ThemeProvider } from "@/components/theme/theme-provider"
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 
@@ -30,6 +31,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
+        <ThemeProvider defaultTheme="light" defaultColorTheme="blue" defaultRadius="md">
           <SignedOut>
             <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
               <h1 className="text-5xl mb-4 scroll-m-20  font-extrabold tracking-tight lg:text-6xl">
@@ -54,6 +56,7 @@ export default function RootLayout({
               </div>
             </SidebarProvider>
           </SignedIn>
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
