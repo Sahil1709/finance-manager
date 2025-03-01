@@ -225,3 +225,7 @@ def get_summary(userid: str, db: Session = Depends(get_db)):
         "total_expenses": total_expenses,
         "total_balance": total_balance
     }
+
+@app.get("/health")
+def health_check():
+    return {"status": "healthy"}
