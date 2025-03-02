@@ -28,7 +28,7 @@ export default function TransactionsPage() {
     async function fetchTransactions() {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions?userid=${userId}/`
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions?userid=${userId}`
         );
         const transactions = await response.json();
         setData((prevData) => {
