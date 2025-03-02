@@ -1,22 +1,7 @@
-FROM node:18-slim
+# Stage 1: Build
+FROM node:18-slim AS builder
 
 WORKDIR /app
-
-# Install system dependencies required by Next.js
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    curl \
-    git \
-    python3 \
-    && rm -rf /var/lib/apt/lists/*
-
-ARG NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
-ARG CLERK_SECRET_KEY
-ARG NEXT_PUBLIC_BACKEND_URL
-
-ENV NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=$NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
-ENV CLERK_SECRET_KEY=$CLERK_SECRET_KEY
-ENV NEXT_PUBLIC_BACKEND_URL=$NEXT_PUBLIC_BACKEND_URL
 
 COPY package.json package-lock.json ./
 
@@ -25,6 +10,16 @@ RUN npm install --force --legacy-peer-deps
 COPY . .
 
 RUN npm run build
+
+# Stage 2: Production
+FROM node:18-slim
+
+WORKDIR /app
+
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/node_modules ./node_modules
 
 EXPOSE 3000
 
