@@ -27,7 +27,7 @@ export function BudgetOverview() {
   useEffect(() => {
     async function fetchBudgets() {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/budgets?userid=${userId}`);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/budgets?userid=${userId}/`);
         const data = await response.json();
         setBudgets(data);
       } catch (error) {
@@ -44,7 +44,7 @@ export function BudgetOverview() {
       if (!userId) return;
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions?userid=${userId}`
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions?userid=${userId}/`
         );
         if (!response.ok) throw new Error("Failed to fetch transactions");
         const data = await response.json();

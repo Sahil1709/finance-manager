@@ -21,7 +21,7 @@ export default function BudgetsPage() {
       if (!userId) return;
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/budgets?userid=${userId}`
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/budgets?userid=${userId}/`
         );
         if (!response.ok) throw new Error("Failed to fetch budgets");
         const data = await response.json();
@@ -39,7 +39,7 @@ export default function BudgetsPage() {
       if (!userId) return;
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions?userid=${userId}`
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions?userid=${userId}/`
         );
         if (!response.ok) throw new Error("Failed to fetch transactions");
         const data = await response.json();
@@ -66,7 +66,7 @@ export default function BudgetsPage() {
   const handleDelete = async (budgetId: string) => {
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/budgets/${budgetId}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/budgets/${budgetId}/`,
         { method: "DELETE" }
       );
       if (!response.ok) throw new Error("Failed to delete budget");
