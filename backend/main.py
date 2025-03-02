@@ -144,14 +144,14 @@ def read_transactions(userid: str, skip: int = 0, limit: int = 100, db: Session 
     transactions = db.query(Transaction).filter(Transaction.userid == userid).offset(skip).limit(limit).all()
     return transactions
 
-@app.get("/transactions/{transaction_id}", response_model=TransactionResponse)
+@app.get("/transactions/{transaction_id}/", response_model=TransactionResponse)
 def read_transaction(transaction_id: int, db: Session = Depends(get_db)):
     transaction = db.query(Transaction).filter(Transaction.id == transaction_id).first()
     if transaction is None:
         raise HTTPException(status_code=404, detail="Transaction not found")
     return transaction
 
-@app.put("/transactions/{transaction_id}", response_model=TransactionResponse)
+@app.put("/transactions/{transaction_id}/", response_model=TransactionResponse)
 def update_transaction(transaction_id: int, transaction: TransactionUpdate, db: Session = Depends(get_db)):
     db_transaction = db.query(Transaction).filter(Transaction.id == transaction_id).first()
     if db_transaction is None:
@@ -163,7 +163,7 @@ def update_transaction(transaction_id: int, transaction: TransactionUpdate, db: 
     db.refresh(db_transaction)
     return db_transaction
 
-@app.delete("/transactions/{transaction_id}")
+@app.delete("/transactions/{transaction_id}/")
 def delete_transaction(transaction_id: int, db: Session = Depends(get_db)):
     db_transaction = db.query(Transaction).filter(Transaction.id == transaction_id).first()
     if db_transaction is None:
@@ -187,14 +187,14 @@ def read_budgets(userid: str, skip: int = 0, limit: int = 100, db: Session = Dep
     budgets = db.query(Budget).filter(Budget.userid == userid).offset(skip).limit(limit).all()
     return budgets
 
-@app.get("/budgets/{budget_id}", response_model=BudgetResponse)
+@app.get("/budgets/{budget_id}/", response_model=BudgetResponse)
 def read_budget(budget_id: int, db: Session = Depends(get_db)):
     budget = db.query(Budget).filter(Budget.id == budget_id).first()
     if budget is None:
         raise HTTPException(status_code=404, detail="Budget not found")
     return budget
 
-@app.put("/budgets/{budget_id}", response_model=BudgetResponse)
+@app.put("/budgets/{budget_id}/", response_model=BudgetResponse)
 def update_budget(budget_id: int, budget: BudgetUpdate, db: Session = Depends(get_db)):
     db_budget = db.query(Budget).filter(Budget.id == budget_id).first()
     if db_budget is None:
@@ -206,7 +206,7 @@ def update_budget(budget_id: int, budget: BudgetUpdate, db: Session = Depends(ge
     db.refresh(db_budget)
     return db_budget
 
-@app.delete("/budgets/{budget_id}")
+@app.delete("/budgets/{budget_id}/")
 def delete_budget(budget_id: int, db: Session = Depends(get_db)):
     db_budget = db.query(Budget).filter(Budget.id == budget_id).first()
     if db_budget is None:
@@ -215,7 +215,7 @@ def delete_budget(budget_id: int, db: Session = Depends(get_db)):
     db.commit()
     return {"detail": "Budget deleted"}
 
-@app.get("/summary/{userid}", response_model=dict)
+@app.get("/summary/{userid}/", response_model=dict)
 def get_summary(userid: str, db: Session = Depends(get_db)):
     total_income = db.query(Transaction).filter(Transaction.userid == userid, Transaction.category == "income").with_entities(func.sum(Transaction.amount)).scalar() or 0
     total_expenses = db.query(Transaction).filter(Transaction.userid == userid, Transaction.category != "income").with_entities(func.sum(Transaction.amount)).scalar() or 0
@@ -226,6 +226,6 @@ def get_summary(userid: str, db: Session = Depends(get_db)):
         "total_balance": total_balance
     }
 
-@app.get("/health")
+@app.get("/health/")
 def health_check():
     return {"status": "healthy"}
