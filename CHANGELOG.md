@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Sahil1709/finance-manager/compare/v1.0.0...v1.1.0) (2025-03-16)
+
+
+### Features
+
+* add new rc release feature ([aac872f](https://github.com/Sahil1709/finance-manager/commit/aac872fa1f05eaae46f232e9c1e5235a2fdb0290))
+
 # 1.0.0 (2025-03-16)
 
 
