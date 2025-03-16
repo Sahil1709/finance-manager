@@ -1,3 +1,10 @@
+# [1.2.0-rc.4](https://github.com/Sahil1709/finance-manager/compare/v1.2.0-rc.3...v1.2.0-rc.4) (2025-03-16)
+
+
+### Features
+
+* add GitHub Actions workflow to trigger RC deploy on tag push ([b980bea](https://github.com/Sahil1709/finance-manager/commit/b980bea3244fbd50676a51bbdbe719d4e3e877c5))
+
 # [1.2.0-rc.3](https://github.com/Sahil1709/finance-manager/compare/v1.2.0-rc.2...v1.2.0-rc.3) (2025-03-16)
 
 
