@@ -2,8 +2,8 @@ module.exports = {
   branches: [
     "main",
     { 
-      name: 'rc/*',
-      prerelease: 'rc${name.replace(/^rc\\//g, "")}'
+      name: 'rc',
+      prerelease: true
     }
   ],
   repositoryUrl: "https://github.com/Sahil1709/finance-manager.git",
