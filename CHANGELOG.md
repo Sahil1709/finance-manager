@@ -1,3 +1,10 @@
+# [1.3.0-rc.2](https://github.com/Sahil1709/finance-manager/compare/v1.3.0-rc.1...v1.3.0-rc.2) (2025-03-16)
+
+
+### Performance Improvements
+
+* add FRONTEND_RC_URL environment variable to backend configuration ([19bb5af](https://github.com/Sahil1709/finance-manager/commit/19bb5af56efabfdc19991a53bd1451fdb537572c))
+
 # [1.3.0-rc.1](https://github.com/Sahil1709/finance-manager/compare/v1.2.0...v1.3.0-rc.1) (2025-03-16)
 
 
