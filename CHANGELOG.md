@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Sahil1709/finance-manager/compare/v1.1.0...v1.1.1) (2025-03-16)
+
+
+### Performance Improvements
+
+* **docs:** add README.md with project overview and setup instructions ([58e51ff](https://github.com/Sahil1709/finance-manager/commit/58e51ff7386f3d3ce92f89d04f2e4487b2981565))
+
 # [1.1.0](https://github.com/Sahil1709/finance-manager/compare/v1.0.0...v1.1.0) (2025-03-16)
 
 
