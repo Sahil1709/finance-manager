@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Sahil1709/finance-manager/compare/v1.1.1...v1.2.0) (2025-03-16)
+
+
+### Features
+
+* add GitHub Actions workflow to trigger RC deploy on release ([162fe04](https://github.com/Sahil1709/finance-manager/commit/162fe0473aaeb8cdcc9c0ff406e3b8de181b0d21))
+
 ## [1.1.1](https://github.com/Sahil1709/finance-manager/compare/v1.1.0...v1.1.1) (2025-03-16)
 
 
