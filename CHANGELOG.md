@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/Sahil1709/finance-manager/compare/v1.3.0...v1.4.0) (2025-03-16)
+
+
+### Features
+
+* update RC deploy workflow to trigger on release publish events ([51b2454](https://github.com/Sahil1709/finance-manager/commit/51b2454066dd87dda7e556997a95fa72a44e7b3e))
+
 # [1.3.0](https://github.com/Sahil1709/finance-manager/compare/v1.2.0...v1.3.0) (2025-03-16)
 
 
