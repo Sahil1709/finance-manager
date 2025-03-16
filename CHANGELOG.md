@@ -15,6 +15,24 @@
 * test rc2 ([2074aac](https://github.com/Sahil1709/finance-manager/commit/2074aac44d8198a5af5375663f1ad305276f0b5d))
 * update README to reflect changes in test workflow ([24dcdb8](https://github.com/Sahil1709/finance-manager/commit/24dcdb8c06202e4542e44e96c2e74671195ad71d))
 
+# [1.4.0](https://github.com/Sahil1709/finance-manager/compare/v1.3.0...v1.4.0) (2025-03-16)
+
+
+### Features
+
+* update RC deploy workflow to trigger on release publish events ([51b2454](https://github.com/Sahil1709/finance-manager/commit/51b2454066dd87dda7e556997a95fa72a44e7b3e))
+
+# [1.3.0](https://github.com/Sahil1709/finance-manager/compare/v1.2.0...v1.3.0) (2025-03-16)
+
+
+### Features
+
+* add GitHub Actions workflow to trigger RC deploy on tag push ([b980bea](https://github.com/Sahil1709/finance-manager/commit/b980bea3244fbd50676a51bbdbe719d4e3e877c5))
+* add workflow_dispatch trigger to RC deploy workflow ([37bfd61](https://github.com/Sahil1709/finance-manager/commit/37bfd61d8c2da56aad7186c4e33b9771b2d1e453))
+* test rc branch semantic release ([a1644a7](https://github.com/Sahil1709/finance-manager/commit/a1644a7fdc3a4fc6accf61d76e4976937a8c75a4))
+* test rc2 ([2074aac](https://github.com/Sahil1709/finance-manager/commit/2074aac44d8198a5af5375663f1ad305276f0b5d))
+* update README to reflect changes in test workflow ([24dcdb8](https://github.com/Sahil1709/finance-manager/commit/24dcdb8c06202e4542e44e96c2e74671195ad71d))
+
 # [1.2.0](https://github.com/Sahil1709/finance-manager/compare/v1.1.1...v1.2.0) (2025-03-16)
 
 
