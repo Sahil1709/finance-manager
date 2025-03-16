@@ -1,3 +1,21 @@
+# [1.5.0-rc.1](https://github.com/Sahil1709/finance-manager/compare/v1.4.0...v1.5.0-rc.1) (2025-03-16)
+
+
+### Bug Fixes
+
+* update authorization header to use PAT_TOKEN for RC deploy workflow ([f002bd0](https://github.com/Sahil1709/finance-manager/commit/f002bd058425a4e464f281e9d8cbac526302295b))
+* update payload format for rc_deploy event in RC deploy workflow ([0d53c3e](https://github.com/Sahil1709/finance-manager/commit/0d53c3e56ca634647e5d9a9d2a5fbf86b41138b6))
+
+
+### Features
+
+* add testing line to README.md ([96f84f7](https://github.com/Sahil1709/finance-manager/commit/96f84f76743cdfeedc92cda1d035fbde9ec8529f))
+
+
+### Performance Improvements
+
+* add FRONTEND_RC_URL environment variable to backend configuration ([19bb5af](https://github.com/Sahil1709/finance-manager/commit/19bb5af56efabfdc19991a53bd1451fdb537572c))
+
 # [1.3.0-rc.2](https://github.com/Sahil1709/finance-manager/compare/v1.3.0-rc.1...v1.3.0-rc.2) (2025-03-16)
 
 
