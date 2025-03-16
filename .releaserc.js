@@ -1,5 +1,10 @@
 module.exports = {
-  branch: "main",
+  branches: [
+    {
+      name: "main",
+      prerelease: "rc"
+    }
+  ],
   repositoryUrl: "https://github.com/Sahil1709/finance-manager.git",
   ci: false,
   plugins: [
