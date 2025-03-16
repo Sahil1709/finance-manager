@@ -1,3 +1,10 @@
+# [1.5.0-rc.2](https://github.com/Sahil1709/finance-manager/compare/v1.5.0-rc.1...v1.5.0-rc.2) (2025-03-16)
+
+
+### Features
+
+* remove Utilities category from analytics data ([8bf66d7](https://github.com/Sahil1709/finance-manager/commit/8bf66d7aefc1eb9a80fa1d0c75dea5f52e70ff1b))
+
 # [1.5.0-rc.1](https://github.com/Sahil1709/finance-manager/compare/v1.4.0...v1.5.0-rc.1) (2025-03-16)
 
 
