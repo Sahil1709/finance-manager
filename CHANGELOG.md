@@ -1,3 +1,10 @@
+# [1.2.0-rc.3](https://github.com/Sahil1709/finance-manager/compare/v1.2.0-rc.2...v1.2.0-rc.3) (2025-03-16)
+
+
+### Features
+
+* update README to reflect changes in test workflow ([24dcdb8](https://github.com/Sahil1709/finance-manager/commit/24dcdb8c06202e4542e44e96c2e74671195ad71d))
+
 # [1.2.0-rc.2](https://github.com/Sahil1709/finance-manager/compare/v1.2.0-rc.1...v1.2.0-rc.2) (2025-03-16)
 
 
