@@ -1,3 +1,10 @@
+# [1.5.0-rc.3](https://github.com/Sahil1709/finance-manager/compare/v1.5.0-rc.2...v1.5.0-rc.3) (2025-03-16)
+
+
+### Features
+
+* update testing section header in README.md ([98ed60c](https://github.com/Sahil1709/finance-manager/commit/98ed60c922b1b20a4bd7fa4fe62957ceb41f68ab))
+
 # [1.5.0-rc.2](https://github.com/Sahil1709/finance-manager/compare/v1.5.0-rc.1...v1.5.0-rc.2) (2025-03-16)
 
 
