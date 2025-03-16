@@ -1,9 +1,8 @@
 name: Trigger Infra RC Deploy
 
 on:
-  push:
-    tags:
-      - '*-rc*'
+  release:
+    types: [published]
   workflow_dispatch:
 
 jobs:
