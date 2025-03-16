@@ -8,7 +8,6 @@ on:
 jobs:
   dispatch-rc-deploy:
     runs-on: ubuntu-latest
-    if: contains(github.event.release.tag_name, '-rc')
     steps:
       - name: Dispatch RC Deploy Event to Infra Repo
         run: |
