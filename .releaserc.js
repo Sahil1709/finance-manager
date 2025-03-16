@@ -1,6 +1,7 @@
 module.exports = {
   branch: "main",
   repositoryUrl: "https://github.com/Sahil1709/finance-manager.git",
+  ci: false,
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
