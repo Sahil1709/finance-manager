@@ -1,3 +1,10 @@
+# [1.2.0-rc.1](https://github.com/Sahil1709/finance-manager/compare/v1.1.0...v1.2.0-rc.1) (2025-03-16)
+
+
+### Features
+
+* test rc branch semantic release ([a1644a7](https://github.com/Sahil1709/finance-manager/commit/a1644a7fdc3a4fc6accf61d76e4976937a8c75a4))
+
 # [1.1.0](https://github.com/Sahil1709/finance-manager/compare/v1.0.0...v1.1.0) (2025-03-16)
 
 
