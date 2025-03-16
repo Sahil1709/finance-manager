@@ -1,3 +1,45 @@
+# [1.5.0-rc.2](https://github.com/Sahil1709/finance-manager/compare/v1.5.0-rc.1...v1.5.0-rc.2) (2025-03-16)
+
+
+### Features
+
+* remove Utilities category from analytics data ([8bf66d7](https://github.com/Sahil1709/finance-manager/commit/8bf66d7aefc1eb9a80fa1d0c75dea5f52e70ff1b))
+
+# [1.5.0-rc.1](https://github.com/Sahil1709/finance-manager/compare/v1.4.0...v1.5.0-rc.1) (2025-03-16)
+
+
+### Bug Fixes
+
+* update authorization header to use PAT_TOKEN for RC deploy workflow ([f002bd0](https://github.com/Sahil1709/finance-manager/commit/f002bd058425a4e464f281e9d8cbac526302295b))
+* update payload format for rc_deploy event in RC deploy workflow ([0d53c3e](https://github.com/Sahil1709/finance-manager/commit/0d53c3e56ca634647e5d9a9d2a5fbf86b41138b6))
+
+
+### Features
+
+* add testing line to README.md ([96f84f7](https://github.com/Sahil1709/finance-manager/commit/96f84f76743cdfeedc92cda1d035fbde9ec8529f))
+
+
+### Performance Improvements
+
+* add FRONTEND_RC_URL environment variable to backend configuration ([19bb5af](https://github.com/Sahil1709/finance-manager/commit/19bb5af56efabfdc19991a53bd1451fdb537572c))
+
+# [1.3.0-rc.2](https://github.com/Sahil1709/finance-manager/compare/v1.3.0-rc.1...v1.3.0-rc.2) (2025-03-16)
+
+
+### Performance Improvements
+
+* add FRONTEND_RC_URL environment variable to backend configuration ([19bb5af](https://github.com/Sahil1709/finance-manager/commit/19bb5af56efabfdc19991a53bd1451fdb537572c))
+
+# [1.3.0-rc.1](https://github.com/Sahil1709/finance-manager/compare/v1.2.0...v1.3.0-rc.1) (2025-03-16)
+
+
+### Features
+
+* add GitHub Actions workflow to trigger RC deploy on tag push ([b980bea](https://github.com/Sahil1709/finance-manager/commit/b980bea3244fbd50676a51bbdbe719d4e3e877c5))
+* test rc branch semantic release ([a1644a7](https://github.com/Sahil1709/finance-manager/commit/a1644a7fdc3a4fc6accf61d76e4976937a8c75a4))
+* test rc2 ([2074aac](https://github.com/Sahil1709/finance-manager/commit/2074aac44d8198a5af5375663f1ad305276f0b5d))
+* update README to reflect changes in test workflow ([24dcdb8](https://github.com/Sahil1709/finance-manager/commit/24dcdb8c06202e4542e44e96c2e74671195ad71d))
+
 # [1.4.0](https://github.com/Sahil1709/finance-manager/compare/v1.3.0...v1.4.0) (2025-03-16)
 
 
