@@ -108,7 +108,7 @@ Finance Manager is a web application designed to help users manage their persona
     npm test
     ```
 
-# Test
+# Test 2
 
 ## Acknowledgements
 
