@@ -54,9 +54,11 @@ export const CheckIcon = ({size, height, width, ...props}) => {
   );
 };
 
+
 export function AppSidebar() {
   const pathname = usePathname();
   const { user } = useUser();
+  const version = process.env.NEXT_PUBLIC_VERSION || "dev"
 
   return (
     <Sidebar>
@@ -88,8 +90,8 @@ export function AppSidebar() {
         ))}
       </SidebarContent>
       <div className="flex justify-center p-4">
-      <Chip color="success" startContent={<CheckIcon size={18} />} size="lg">
-        Version 1.0.0
+      <Chip color="success" variant="flat" startContent={<CheckIcon size={18} />} size="lg">
+        {version}
       </Chip>
       </div>
       <div className="flex items-center p-4 border-t">
