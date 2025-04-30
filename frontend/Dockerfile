@@ -14,7 +14,7 @@ ENV NEXT_PUBLIC_VERSION=$NEXT_PUBLIC_VERSION
 
 COPY package.json package-lock.json ./
 
-RUN npm install
+RUN npm install --force
 
 COPY . .
 
