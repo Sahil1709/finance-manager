@@ -33,6 +33,29 @@ services:
     volumes:
       - ./backend:/app
 
+  analytics:
+    build:
+      context: ./analytics_service
+      dockerfile: Dockerfile
+      args:
+        DATABASE_URL: ${DATABASE_URL}
+        FRONTEND_URL: ${FRONTEND_URL}
+        FRONTEND_RC_URL: ${FRONTEND_RC_URL}
+        GROQ_API_KEY: ${GROQ_API_KEY}
+    container_name: analytics_service
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - FRONTEND_URL=${FRONTEND_URL}
+      - FRONTEND_RC_URL=${FRONTEND_RC_URL}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    ports:
+      - "8001:8001"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    volumes:
+      - ./analytics_service:/app
+
   frontend:
     build:
       context: ./frontend
@@ -50,3 +73,6 @@ services:
       - "3000:3000"
     depends_on:
       - backend
+      
+volumes:
+  mysql_data:
