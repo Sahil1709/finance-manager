@@ -13,7 +13,7 @@ export default function DashboardPage() {
   useEffect(() => {
     async function fetchSummary() {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/summary/${userId}`)
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/summary/${userId}/`)
         const data = await response.json()
         setSummary(data)
       } catch (error) {

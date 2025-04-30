@@ -4,9 +4,11 @@ WORKDIR /app
 
 ARG DATABASE_URL
 ARG FRONTEND_URL
+ARG FRONTEND_RC_URL
 
 ENV DATABASE_URL=$DATABASE_URL
 ENV FRONTEND_URL=$FRONTEND_URL
+ENV FRONTEND_RC_URL=$FRONTEND_RC_URL
 
 COPY requirements.txt ./
 
@@ -16,4 +18,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["fastapi", "run", "main.py"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers", "--forwarded-allow-ips", "*"]

@@ -66,7 +66,7 @@ export default function BudgetsPage() {
   const handleDelete = async (budgetId: string) => {
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/budgets/${budgetId}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/budgets/${budgetId}/`,
         { method: "DELETE" }
       );
       if (!response.ok) throw new Error("Failed to delete budget");

@@ -75,7 +75,7 @@ export function AddBudgetDialog({
 
     if (budget && budget.id) {
       // Update budget via PUT
-      fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/budgets/${budget.id}`, {
+      fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/budgets/${budget.id}/`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

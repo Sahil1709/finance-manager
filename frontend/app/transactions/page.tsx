@@ -46,7 +46,7 @@ export default function TransactionsPage() {
   }, [userId]);
 
   const handleDelete = async (id: string) => {
-    await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions/${id}`, {
+    await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions/${id}/`, {
       method: "DELETE",
     });
     setData((prevData) =>
@@ -71,7 +71,7 @@ export default function TransactionsPage() {
       if (editingTransaction?.id) {
         // Update existing transaction
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions/${editingTransaction.id}`,
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions/${editingTransaction.id}/`,
           {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
@@ -83,7 +83,7 @@ export default function TransactionsPage() {
       } else {
         // Add new transaction
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions`,
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/transactions/`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },

@@ -7,8 +7,6 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
     ports:
       - "3306:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
     healthcheck:
       test: ["CMD-SHELL", "mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e 'USE finance;'"]
       timeout: 20s
@@ -21,10 +19,12 @@ services:
       args:
         DATABASE_URL: ${DATABASE_URL}
         FRONTEND_URL: ${FRONTEND_URL}
+        FRONTEND_RC_URL: ${FRONTEND_RC_URL}
     container_name: backend
     environment:
       - DATABASE_URL=${DATABASE_URL}
       - FRONTEND_URL=${FRONTEND_URL}
+      - FRONTEND_RC_URL=${FRONTEND_RC_URL}
     ports:
       - "8000:8000"
     depends_on:

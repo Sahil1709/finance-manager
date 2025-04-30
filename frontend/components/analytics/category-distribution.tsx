@@ -7,7 +7,6 @@ const data = [
   { name: "Transportation", value: 200 },
   { name: "Entertainment", value: 150 },
   { name: "Shopping", value: 300 },
-  { name: "Utilities", value: 180 },
 ]
 
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884D8"]
