@@ -106,7 +106,7 @@ def get_db():
         db.close()
 
 # FastAPI application instance
-app = FastAPI(title="Finance Manager Backend", version="1.0")
+app = FastAPI(title="Finance Manager Backend", version="1.0", root_path="/api")
 
 origins = [
     os.getenv("FRONTEND_URL"),

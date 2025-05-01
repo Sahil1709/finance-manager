@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-app = FastAPI(title="Analytics Service")
+app = FastAPI(title="Analytics Service", root_path="/analytics-api")
 app.add_middleware(
   CORSMiddleware,
   allow_origins=[os.getenv("FRONTEND_URL")],
