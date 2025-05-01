@@ -74,7 +74,6 @@ def serialize_bg(bg: Budget) -> dict:
         "created_at":   bg.created_at.isoformat(),
     }
 
-@router.get("/insights/{user_id}", include_in_schema=False)
 @router.get("/insights/{user_id}/")
 async def get_insights(userid: str):
     db = SessionLocal()
