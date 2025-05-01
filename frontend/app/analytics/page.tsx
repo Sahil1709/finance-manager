@@ -14,6 +14,7 @@ import { CategoryDistribution } from "@/components/analytics/category-distributi
 import { MonthlyComparison } from "@/components/analytics/monthly-comparison";
 import ReactMarkdown from "react-markdown";
 import { useAuth } from "@clerk/nextjs";
+import { SignIn, SignOutButton } from '@clerk/nextjs'
 
 export default function AnalyticsPage() {
   const { userId } = useAuth();

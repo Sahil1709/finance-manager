@@ -19,7 +19,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Personal Finance Manager",
   description: "Manage your personal finances with ease",
-  generator: "v0.dev",
 };
 
 export default function RootLayout({

@@ -7,6 +7,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { AddBudgetDialog } from "@/components/budgets/add-budget-dialog";
 import { useAuth } from "@clerk/nextjs";
+import { SignIn, SignOutButton } from '@clerk/nextjs'
+
 
 export default function BudgetsPage() {
   const { userId } = useAuth();
@@ -14,6 +16,7 @@ export default function BudgetsPage() {
   const [transactions, setTransactions] = useState<any[]>([]);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editingBudget, setEditingBudget] = useState<any | null>(null);
+
 
   // Fetch budgets for the current user
   useEffect(() => {

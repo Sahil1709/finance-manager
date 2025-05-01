@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { TransactionsTable } from "@/components/transactions/transactions-table";
 import { AddTransactionDialog } from "@/components/transactions/add-transaction-dialog";
 import { useAuth } from "@clerk/nextjs";
+import { SignIn, SignOutButton } from '@clerk/nextjs'
 
 type Transaction = {
   id: string;

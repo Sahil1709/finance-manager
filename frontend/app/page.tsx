@@ -1,10 +1,12 @@
 "use client"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { SignIn, SignOutButton } from '@clerk/nextjs'
 import { Overview } from "@/components/overview"
 import { RecentTransactions } from "@/components/recent-transactions"
 import { BudgetOverview } from "@/components/budget-overview"
 import { useAuth } from "@clerk/nextjs"
 import { useEffect, useState } from "react"
+import { Button } from "@/components/ui/button";
 
 export default function DashboardPage() {
   const { userId } = useAuth()

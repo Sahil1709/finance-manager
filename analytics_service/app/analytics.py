@@ -48,7 +48,7 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine)
 
-router = APIRouter()
+router = APIRouter(prefix="/analytics-api")
 
 class InsightResponse(BaseModel):
     insights: list[str]
@@ -74,7 +74,8 @@ def serialize_bg(bg: Budget) -> dict:
         "created_at":   bg.created_at.isoformat(),
     }
 
-@router.get("/insights/{userid}")
+@router.get("/insights/{user_id}", include_in_schema=False)
+@router.get("/insights/{user_id}/")
 async def get_insights(userid: str):
     db = SessionLocal()
     try:
