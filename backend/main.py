@@ -111,6 +111,7 @@ app = FastAPI(title="Finance Manager Backend", version="1.0", root_path="/api")
 origins = [
     os.getenv("FRONTEND_URL"),
     os.getenv("FRONTEND_RC_URL"),
+    os.getenv("FRONTEND_GREEN_URL"),
     "http://localhost",
     "http://localhost:8080",
     "http://localhost:3000",

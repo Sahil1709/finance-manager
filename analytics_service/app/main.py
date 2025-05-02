@@ -13,7 +13,11 @@ app = FastAPI(
 )
 app.add_middleware(
   CORSMiddleware,
-  allow_origins=[os.getenv("FRONTEND_URL")],
+  allow_origins=[
+      os.getenv("FRONTEND_URL"),
+      os.getenv("FRONTEND_GREEN_URL"),
+      "http://localhost:3000",
+    ],
   allow_methods=["GET"],
   allow_headers=["*"],
 )
