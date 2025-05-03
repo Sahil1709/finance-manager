@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Install Dependencies
         run: npm install
@@ -28,6 +28,7 @@ jobs:
 
   dispatch-rc-deploy:
     runs-on: ubuntu-latest
+    needs: run-semantic-release
     steps:
       - name: Dispatch RC Deploy Event to Infra Repo
         run: |
