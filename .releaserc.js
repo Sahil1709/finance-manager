@@ -7,7 +7,7 @@ module.exports = {
     }
   ],
   repositoryUrl: "https://github.com/Sahil1709/finance-manager.git",
-  ci: false,
+  ci: true,
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
