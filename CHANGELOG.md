@@ -1,3 +1,10 @@
+## [1.5.2-rc.1](https://github.com/Sahil1709/finance-manager/compare/v1.5.1...v1.5.2-rc.1) (2025-05-03)
+
+
+### Bug Fixes
+
+* Change main branch to release in semantic release configuration ([6b25d65](https://github.com/Sahil1709/finance-manager/commit/6b25d65f8d244988845a3ba1773d426ea39a618d))
+
 ## [1.5.1](https://github.com/Sahil1709/finance-manager/compare/v1.5.0...v1.5.1) (2025-05-03)
 
 
