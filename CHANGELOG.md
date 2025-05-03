@@ -1,3 +1,33 @@
+# [1.5.0](https://github.com/Sahil1709/finance-manager/compare/v1.4.0...v1.5.0) (2025-05-03)
+
+
+### Bug Fixes
+
+* Force npm install to resolve dependency issues ([18c42a3](https://github.com/Sahil1709/finance-manager/commit/18c42a3b8e5254d41f19b76124ce96d7d27f4cd6))
+* Remove unnecessary schema inclusion for insights endpoint ([f60ae27](https://github.com/Sahil1709/finance-manager/commit/f60ae2791f451f7b4d0eb86ba4ad109d601c68d8))
+* update authorization header to use PAT_TOKEN for RC deploy workflow ([f002bd0](https://github.com/Sahil1709/finance-manager/commit/f002bd058425a4e464f281e9d8cbac526302295b))
+* Update Node.js version to 20 and add dependency on semantic release job for RC deploy ([94dae18](https://github.com/Sahil1709/finance-manager/commit/94dae18e3aab3606ad98eacc0adf2cb5891efb31))
+* update payload format for rc_deploy event in RC deploy workflow ([0d53c3e](https://github.com/Sahil1709/finance-manager/commit/0d53c3e56ca634647e5d9a9d2a5fbf86b41138b6))
+
+
+### Features
+
+* Add analytics service with FastAPI and integrate Groq for insights ([c8abdbc](https://github.com/Sahil1709/finance-manager/commit/c8abdbcdcfae78436c836ffa21e68d347b644cba))
+* Add FRONTEND_GREEN_URL environment variable to Dockerfiles and update CORS origins ([f74a0ec](https://github.com/Sahil1709/finance-manager/commit/f74a0ec1affeb19716157a21572f1521b5fe05ed))
+* Add FRONTEND_RC_URL environment variable to analytics service ([8e519a3](https://github.com/Sahil1709/finance-manager/commit/8e519a32a17f01c44c2bdd8498fdf6ccc806009e))
+* Add NEXT_PUBLIC_ANALYTICS_URL to frontend environment variables ([26a5a61](https://github.com/Sahil1709/finance-manager/commit/26a5a6161ebc0dbc2d0f949beb6a2e886f4ec788))
+* Add NEXT_PUBLIC_VERSION environment variable and display version in AppSidebar ([0edaeea](https://github.com/Sahil1709/finance-manager/commit/0edaeeac4282cd317ea2ef8d324a15de1c3d5072))
+* add testing line to README.md ([96f84f7](https://github.com/Sahil1709/finance-manager/commit/96f84f76743cdfeedc92cda1d035fbde9ec8529f))
+* Enable CI for semantic release and add semantic release steps to GitHub Actions workflow ([56c62a8](https://github.com/Sahil1709/finance-manager/commit/56c62a8f41bd2627eb11edbff4a50c3aee68e2a5))
+* remove Utilities category from analytics data ([8bf66d7](https://github.com/Sahil1709/finance-manager/commit/8bf66d7aefc1eb9a80fa1d0c75dea5f52e70ff1b))
+* Set root path for FastAPI applications in analytics and backend services ([4b69dd3](https://github.com/Sahil1709/finance-manager/commit/4b69dd3ed4db2f798d070e9822262d909e20a734))
+* Update FastAPI and frontend components for improved routing and authentication ([07b02ef](https://github.com/Sahil1709/finance-manager/commit/07b02ef950f0956ff5ba94f2aae33afcc714070d))
+
+
+### Performance Improvements
+
+* add FRONTEND_RC_URL environment variable to backend configuration ([19bb5af](https://github.com/Sahil1709/finance-manager/commit/19bb5af56efabfdc19991a53bd1451fdb537572c))
+
 # [1.5.0-rc.2](https://github.com/Sahil1709/finance-manager/compare/v1.5.0-rc.1...v1.5.0-rc.2) (2025-03-16)
 
 
