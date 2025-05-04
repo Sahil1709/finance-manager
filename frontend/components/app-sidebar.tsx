@@ -64,6 +64,9 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarHeader className="border-b">
         <h1 className="px-4 text-xl font-bold">Finance Manager</h1>
+        <p className="px-4 text-sm text-muted-foreground">
+          Created with ❤️ by Sahil
+        </p>
       </SidebarHeader>
       <SidebarContent>
         {navigation.map((group) => (
