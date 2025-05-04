@@ -1,3 +1,10 @@
+## [1.5.2-rc.2](https://github.com/Sahil1709/finance-manager/compare/v1.5.2-rc.1...v1.5.2-rc.2) (2025-05-04)
+
+
+### Bug Fixes
+
+* Add creator attribution in the sidebar header ([aa2445e](https://github.com/Sahil1709/finance-manager/commit/aa2445e78474e22e6848331d55671bdc39c483ab))
+
 ## [1.5.2-rc.1](https://github.com/Sahil1709/finance-manager/compare/v1.5.1...v1.5.2-rc.1) (2025-05-03)
 
 
