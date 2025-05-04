@@ -37,6 +37,8 @@ Finance Manager is a web application designed to help users manage their persona
     ```env
     DATABASE_URL=mysql+pymysql://root:my-secret-pw@mysql:3306/finance
     FRONTEND_URL=http://localhost:3000
+    FRONTEND_RC_URL=http://localhost:3000
+    FRONTEND_GREEN_URL=http://localhost:3000
     MYSQL_ROOT_PASSWORD=<>
     MYSQL_DATABASE=finance
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
