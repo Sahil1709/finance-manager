@@ -1,3 +1,10 @@
+## [1.5.2-rc.3](https://github.com/Sahil1709/finance-manager/compare/v1.5.2-rc.2...v1.5.2-rc.3) (2025-05-04)
+
+
+### Bug Fixes
+
+* Add additional frontend URLs to environment variables in README ([e69fbd3](https://github.com/Sahil1709/finance-manager/commit/e69fbd381e201e675a30c4673c3aae3282810999))
+
 ## [1.5.2-rc.2](https://github.com/Sahil1709/finance-manager/compare/v1.5.2-rc.1...v1.5.2-rc.2) (2025-05-04)
 
 
