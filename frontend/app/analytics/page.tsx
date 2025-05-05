@@ -40,7 +40,7 @@ export default function AnalyticsPage() {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_ANALYTICS_URL}/insights/${userId}`
+        `${process.env.NEXT_PUBLIC_ANALYTICS_URL}/insights/userid/?userid=${userId}`
       );
 
       if (!response.body) {
