@@ -1,3 +1,10 @@
+## [1.5.2-rc.4](https://github.com/Sahil1709/finance-manager/compare/v1.5.2-rc.3...v1.5.2-rc.4) (2025-05-05)
+
+
+### Bug Fixes
+
+* Update fetch URL for user insights to include query parameter ([f391d78](https://github.com/Sahil1709/finance-manager/commit/f391d780fb6ec7eb9ae61ebf253d392b59b6afcf))
+
 ## [1.5.2-rc.3](https://github.com/Sahil1709/finance-manager/compare/v1.5.2-rc.2...v1.5.2-rc.3) (2025-05-04)
 
 
